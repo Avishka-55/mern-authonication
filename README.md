@@ -19,40 +19,18 @@ A full-stack modern authentication system built using the MERN stack with email 
 
 ---
 
-## 🧭 Project Structure
-
-project-folder/
-│
-├── backend/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── config/
-│ ├── server.js
-│ └── package.json
-│
-└── frontend/
-├── src/
-│ ├── components/
-│ ├── pages/
-│ ├── context/
-│ ├── assets/
-│ └── App.jsx
-└── package.json
-
-
-
----
 
 ## 🛠️ Installation & Setup
 
 📦 Install Dependencies
+
 ▶️ Backend
 ```
 cd backend
 npm install
 ```
 ▶️ Frontend
+
 ```
 cd frontend
 npm install
