@@ -19,7 +19,7 @@ app.use(cookieParser())
 // CORS FIX for Netlify + local dev
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://mern-auth-123.netlify.app', // change this after deploy
+  'https://mern-auth-123.netlify.app', 
 ]
 
 app.use(
