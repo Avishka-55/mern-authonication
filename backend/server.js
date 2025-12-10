@@ -33,7 +33,7 @@ app.use(
 connectDB()
 
 app.get('/', (req, res) => {
-  res.send('API Working 👌')
+  res.send('API Working ')
 })
 
 // routes
