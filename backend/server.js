@@ -20,6 +20,9 @@ app.use(cookieParser())
 // CORS
 const allowedOrigins = [
   'http://localhost:5173',
+  'http://backend:4000',
+  'http://54.206.96.119',
+  'https://auth.wmavishka.me',
   'https://mern-auth-123.netlify.app',
   'https://urban-meme-jj5r79wwgpvphqgpw-5173.app.github.dev',
 ]
