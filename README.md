@@ -1,8 +1,11 @@
 # 🚀 MERN Authentication App
 
-Live Demo 👉 **https://mern-auth-123.netlify.app/**
+Live Demo on netlify👉 **https://mern-auth-123.netlify.app/**  
+Live Demo on AWS EC2👉 **https://auth.wmavishka.me/** (NOTE  To avoid unnecessary cloud costs, the EC2 instance is **not kept running continuously**.)
 
-A full-stack modern authentication system built using the MERN stack with email verification, secure JWT login, logout, protected routes, and more. Clean UI + full-stack OTP verification.
+A production-ready full-stack authentication system built using the **MERN stack**, fully **Dockerized** and **deployed on AWS EC2** with **Nginx reverse proxy** and **SSL (Let’s Encrypt)**.
+
+Includes email OTP verification, secure JWT authentication, HttpOnly cookies, protected routes, and modern UI.
 
 ---
 
@@ -11,35 +14,47 @@ A full-stack modern authentication system built using the MERN stack with email 
 - ✉️ Email OTP Verification  
 - 🍪 HttpOnly Cookie Authentication  
 - 🔒 Protected Routes  
+- 🔑 JWT-based Auth Flow  
 - 🎨 Modern UI (React + Tailwind)  
 - 🚀 Fully Responsive  
-- 🌐 Frontend deployed on Netlify  
-- 🛠️ Node.js + Express Backend  
+- 🐳 Dockerized Frontend & Backend  
+- 🌐 Nginx Reverse Proxy  
+- 🔐 HTTPS with Let’s Encrypt (Certbot)  
+- ☁️ Deployed on AWS EC2  
 - 📡 MongoDB Atlas Database  
 
 ---
 
+## 🧠 Architecture Overview
 
-## 🛠️ Installation & Setup
+Browser (HTTPS)
+↓
+Nginx (SSL Termination)
+↓
+
+MongoDB Atlas
+
+## 🛠️ Installation & Setup (Local Development)
 
 📦 Install Dependencies
 
 ▶️ Backend
-```
+
+---
 cd backend
 npm install
-```
-▶️ Frontend
+---
 
-```
+▶️ Frontend
+---
 cd frontend
 npm install
-```
+---
 
-🔧 Environment Variables
+## 🔧 Environment Variables
 
-Create a .env file inside backend/:
-```
+### Backend (`backend/.env`)
+---
 MONGODB_URL=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 NODE_ENV=development
@@ -48,74 +63,83 @@ SMTP_PASS=your_smtp_pass
 SENDER_EMAIL=your_sender_email
 PORT=4000
 BREVO_API_KEY=your_brevo_api_key
-```
+---
 
-
-Create a .env file inside frontend/:
-```
-VITE_BACKEND_URL=http://localhost:4000
-```
-
-🚀 Run the App
-```
 ▶️ Start Backend
-cd backend
+
+---
 npm run server
-```
+---
+
 ▶️ Start Frontend
-```
+
+---
 cd frontend
 npm run dev
-```
-⚙️ Tech Stack
-Frontend
+---
 
-React
 
-Tailwind CSS
+## 🐳 Docker Setup (Production-style)
 
-Axios
+Build and run containers:
+---
+docker compose up -d --build
+---
 
-React Router
 
-React Toastify
+Services:
+- Backend container (Node.js)
+- Nginx reverse proxy
+- Environment-based configuration
 
-Backend
+---
 
-Node.js
+## ⚙️ Tech Stack
 
-Express
+### Frontend
+- React  
+- Tailwind CSS  
+- Axios  
+- React Router  
+- React Toastify  
 
-MongoDB + Mongoose
+### Backend
+- Node.js  
+- Express  
+- MongoDB + Mongoose  
+- Bcrypt  
+- JSON Web Token (JWT)  
+- Nodemailer (Brevo)  
 
-Bcrypt
+### DevOps / Infrastructure
+- Docker & Docker Compose  
+- Nginx  
+- AWS EC2  
+- Let’s Encrypt (Certbot)  
+- OpenSSL  
 
-JSON Web Token
 
-Nodemailer (Brevo)
 
-🌐 Deployment
-Frontend
+## 🌐 Deployment
+---
 
-Deployed on Netlify →
-https://mern-auth-123.netlify.app/
+- Hosted on **AWS EC2**
+- Reverse proxied via **Nginx**
+- Secured with **HTTPS (Let’s Encrypt SSL)**
+- Dockerized for consistency and portability
 
-Backend
+---
 
-Can be deployed on any hosting:
+## 🔐 Security Highlights
+---
 
-Railway
+- HttpOnly cookies (XSS protection)
+- HTTPS enforced
+- JWT authentication
+- Environment-based secrets
+---
 
-Render
+---
 
-Cyclic
-
-VPS / Custom Server
-
-📄 License
-
+## 📄 License
 Free to use for learning, practicing, and personal projects.
-
-
-
-
