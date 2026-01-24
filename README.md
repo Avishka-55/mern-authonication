@@ -36,7 +36,7 @@ Nginx (SSL Termination)
 MongoDB Atlas
 ---
 
-## 🛠️ Installation & Setup (Local Development)
+## 🛠️ Installation & Setup 
 
 📦 Install Dependencies
 
