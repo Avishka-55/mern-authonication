@@ -1,7 +1,8 @@
 # 🚀 MERN Authentication App
 
 Live Demo on netlify👉 **https://mern-auth-123.netlify.app/**  
-Live Demo on AWS EC2👉 **https://auth.wmavishka.me/** (NOTE  To avoid unnecessary cloud costs, the EC2 instance is **not kept running continuously**.)
+Live Demo on AWS EC2👉 **https://auth.wmavishka.me/** 
+(NOTE-: To avoid unnecessary cloud costs, the EC2 instance is **not kept running continuously**.)
 
 A production-ready full-stack authentication system built using the **MERN stack**, fully **Dockerized** and **deployed on AWS EC2** with **Nginx reverse proxy** and **SSL (Let’s Encrypt)**.
 
@@ -40,21 +41,21 @@ MongoDB Atlas
 
 ▶️ Backend
 
----
+```
 cd backend
 npm install
----
+```
 
 ▶️ Frontend
----
+```
 cd frontend
 npm install
----
+```
 
 ## 🔧 Environment Variables
 
 ### Backend (`backend/.env`)
----
+```
 MONGODB_URL=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 NODE_ENV=development
@@ -63,30 +64,29 @@ SMTP_PASS=your_smtp_pass
 SENDER_EMAIL=your_sender_email
 PORT=4000
 BREVO_API_KEY=your_brevo_api_key
----
+```
 
 ▶️ Start Backend
 
----
+```
 npm run server
----
+```
 
 ▶️ Start Frontend
 
----
-cd frontend
+```
 npm run dev
----
+```
 
 
 ## 🐳 Docker Setup (Production-style)
 
 Build and run containers:
----
+```
 docker compose up -d --build
+```
+
 ---
-
-
 Services:
 - Backend container (Node.js)
 - Nginx reverse proxy
@@ -103,6 +103,9 @@ Services:
 - React Router  
 - React Toastify  
 
+---
+
+
 ### Backend
 - Node.js  
 - Express  
@@ -110,6 +113,9 @@ Services:
 - Bcrypt  
 - JSON Web Token (JWT)  
 - Nodemailer (Brevo)  
+
+---
+
 
 ### DevOps / Infrastructure
 - Docker & Docker Compose  
@@ -119,9 +125,8 @@ Services:
 - OpenSSL  
 
 
-
 ## 🌐 Deployment
----
+
 
 - Hosted on **AWS EC2**
 - Reverse proxied via **Nginx**
@@ -131,13 +136,13 @@ Services:
 ---
 
 ## 🔐 Security Highlights
----
+
 
 - HttpOnly cookies (XSS protection)
 - HTTPS enforced
 - JWT authentication
 - Environment-based secrets
----
+
 
 ---
 
