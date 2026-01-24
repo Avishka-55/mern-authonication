@@ -1,0 +1,21 @@
+# env files
+.env
+backend/.env
+frontend/.env
+
+# node stuff
+node_modules
+npm-debug.log
+
+# docker volumes
+certbot/conf
+certbot/www
+
+# nginx certs
+*.pem
+
+# build output
+dist
+
+# OS junk
+.DS_Store
