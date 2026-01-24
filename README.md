@@ -2,6 +2,7 @@
 
 Live Demo on netlify👉 **https://mern-auth-123.netlify.app/**  
 Live Demo on AWS EC2👉 **https://auth.wmavishka.me/** 
+
 (NOTE-: To avoid unnecessary cloud costs, the EC2 instance is **not kept running continuously**.)
 
 A production-ready full-stack authentication system built using the **MERN stack**, fully **Dockerized** and **deployed on AWS EC2** with **Nginx reverse proxy** and **SSL (Let’s Encrypt)**.
@@ -64,6 +65,12 @@ SMTP_PASS=your_smtp_pass
 SENDER_EMAIL=your_sender_email
 PORT=4000
 BREVO_API_KEY=your_brevo_api_key
+```
+
+### Frontend (`frontend/.env`)
+
+```
+VITE_BACKEND_URL=http://localhost:4000
 ```
 
 ▶️ Start Backend
