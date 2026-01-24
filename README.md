@@ -5,7 +5,7 @@ Live Demo on AWS EC2👉 **https://auth.wmavishka.me/**
 
 (NOTE-: To avoid unnecessary cloud costs, the EC2 instance is **not kept running continuously**.)
 
-A production-ready full-stack authentication system built using the **MERN stack**, fully **Dockerized** and **deployed on AWS EC2** with **Nginx reverse proxy** and **SSL (Let’s Encrypt)**.
+A production-ready full-stack authentication system built using the **MERN stack**, fully **Dockerized** and **deployed on AWS EC2** with **Nginx reverse proxy** and **SSL **.
 
 Includes email OTP verification, secure JWT authentication, HttpOnly cookies, protected routes, and modern UI.
 
@@ -28,13 +28,13 @@ Includes email OTP verification, secure JWT authentication, HttpOnly cookies, pr
 ---
 
 ## 🧠 Architecture Overview
-
+---
 Browser (HTTPS)
 ↓
 Nginx (SSL Termination)
 ↓
-
 MongoDB Atlas
+---
 
 ## 🛠️ Installation & Setup (Local Development)
 
@@ -137,7 +137,7 @@ Services:
 
 - Hosted on **AWS EC2**
 - Reverse proxied via **Nginx**
-- Secured with **HTTPS (Let’s Encrypt SSL)**
+- Secured with **HTTPS **
 - Dockerized for consistency and portability
 
 ---
